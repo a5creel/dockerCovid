@@ -19,6 +19,5 @@ RUN install2.r --error \
 # install with devtools like this if needed
 # RUN Rscript -e "devtools::install_github("tidyverse/tidyr");"
 
-RUN install2.r --error \
-    --deps TRUE \
-    tidycensus \
+#getting sf and tidycensus okay
+RUN apt-get install -y libudunits2-dev
