@@ -2,7 +2,7 @@ FROM rocker/geospatial:4.0.3
 
 #sf and tidycensus 
 RUN apt-get update \
-    && apt-get install -y libudunits2-dev
+    && apt-get install -y libudunits2-dev libproj-dev
 
 # install from MRAN, a version-frozen mirror of CRAN like this
 RUN install2.r --error \
