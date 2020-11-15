@@ -17,6 +17,7 @@ RUN install2.r --error \
     plyr \
     rmdcev \
     rstan \
+    sf \
     tidycensus 
     
 
