@@ -17,8 +17,8 @@ RUN install2.r --error \
     plyr \
     rmdcev \
     rstan \
-    sf \
-    tidycensus
+    tidycensus 
+    
 
 # install with devtools like this if needed
 # RUN Rscript -e "devtools::install_github("tidyverse/tidyr");"
