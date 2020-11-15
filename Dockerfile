@@ -22,3 +22,5 @@ RUN install2.r --error \
 #sf and tidycensus 
 RUN apt-get update \
     && apt-get install -y libudunits2-dev
+    
+RUN Rscript -e 'install.packages(c("sf", "tidycensus"), dependencies = TRUE, repos = "https://cloud.r-project.org")'
