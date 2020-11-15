@@ -20,4 +20,5 @@ RUN install2.r --error \
 # RUN Rscript -e "devtools::install_github("tidyverse/tidyr");"
 
 #sf and tidycensus 
-RUN apt-get update && install -y libudunits2-dev
+RUN apt-get update \
+    && apt-get install -y libudunits2-dev
