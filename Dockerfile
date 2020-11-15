@@ -1,5 +1,9 @@
 FROM rocker/geospatial:4.0.3
 
+#sf and tidycensus 
+RUN apt-get update \
+    && apt-get install -y libudunits2-dev
+
 # install from MRAN, a version-frozen mirror of CRAN like this
 RUN install2.r --error \
     --deps TRUE \
@@ -19,8 +23,4 @@ RUN install2.r --error \
 # install with devtools like this if needed
 # RUN Rscript -e "devtools::install_github("tidyverse/tidyr");"
 
-#sf and tidycensus 
-RUN apt-get update \
-    && apt-get install -y libudunits2-dev
-    
-RUN Rscript -e 'install.packages(c("sf", "tidycensus"), dependencies = TRUE, repos = "https://cloud.r-project.org")'
+
