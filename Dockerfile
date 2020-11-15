@@ -1,4 +1,4 @@
-FROM rocker/verse:4.0.3
+FROM rocker/geospatial:4.0.3
 
 # install from MRAN, a version-frozen mirror of CRAN like this
 RUN install2.r --error \
